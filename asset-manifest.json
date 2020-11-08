@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/GothamQuiz/static/css/main.85e6a5d1.chunk.css",
-    "main.js": "/GothamQuiz/static/js/main.dcdd4041.chunk.js",
-    "main.js.map": "/GothamQuiz/static/js/main.dcdd4041.chunk.js.map",
+    "main.js": "/GothamQuiz/static/js/main.ab1227ac.chunk.js",
+    "main.js.map": "/GothamQuiz/static/js/main.ab1227ac.chunk.js.map",
     "runtime-main.js": "/GothamQuiz/static/js/runtime-main.d35b2951.js",
     "runtime-main.js.map": "/GothamQuiz/static/js/runtime-main.d35b2951.js.map",
     "static/js/2.647fc361.chunk.js": "/GothamQuiz/static/js/2.647fc361.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.d35b2951.js",
     "static/js/2.647fc361.chunk.js",
     "static/css/main.85e6a5d1.chunk.css",
-    "static/js/main.dcdd4041.chunk.js"
+    "static/js/main.ab1227ac.chunk.js"
   ]
 }
