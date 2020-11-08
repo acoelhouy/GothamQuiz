@@ -22,19 +22,31 @@ class QuizQuestions extends Component{
     }
 
 
+    ChangeInputs = function(ActualProps){
 
-    UNSAFE_componentWillReceiveProps(nextProps){
+        console.log(this.props, "props");
 
-        this.setState({RightAnswer: nextProps.RightAnswer})
-        this.setState({WrongAnswers: nextProps.WrongAnswers})
-        
-
-    }
- 
-
-    componentDidMount(){    
         let Append = document.getElementById("Answers");
-        Object.values(this.state.WrongAnswers[0]).forEach(function(element, index){ 
+
+        if(this.props.ActualPosition > 1){
+
+           document.getElementById("Answers").innerHTML = "";
+
+            Object.values(ActualProps).forEach(function(element, index){ 
+                let NameInput = 'Answer';
+                let newInput = document.createElement("input");
+                newInput.setAttribute("type", "radio");
+                newInput.setAttribute("name", NameInput);
+                newInput.setAttribute("value", Math.random());
+                let newLabel = document.createElement("label");
+                newLabel.setAttribute("htmlFor", NameInput);
+                newLabel.innerHTML = element;
+               Append.append(newInput, newLabel);
+            })
+        }else{
+        
+        
+        Object.values(ActualProps).forEach(function(element, index){ 
             let NameInput = 'Answer';
             let newInput = document.createElement("input");
             newInput.setAttribute("type", "radio");
@@ -44,11 +56,26 @@ class QuizQuestions extends Component{
             newLabel.setAttribute("htmlFor", NameInput);
             newLabel.innerHTML = element;
            Append.append(newInput, newLabel);
+         })
+        }    
+    }
 
-           
-            
-        })
 
+
+    UNSAFE_componentWillReceiveProps(nextProps){
+
+        this.setState({RightAnswer: nextProps.RightAnswer})
+        this.setState({WrongAnswers: nextProps.WrongAnswers})
+
+      
+        
+
+    }
+ 
+
+    componentDidMount(){    
+      
+       // this.ChangeInputs(this.state.WrongAnswers[0], false);
    
     }
 
@@ -58,7 +85,7 @@ class QuizQuestions extends Component{
  
 componentDidUpdate(prevProps) {
 
-console.log(this.state, "nuevoestado");
+        this.ChangeInputs(this.state.WrongAnswers[0]);
 
 }
 
