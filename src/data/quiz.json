@@ -1,0 +1,37 @@
+{
+
+    "QuizzBody":[
+
+                {
+                "QuestionNumber": 1,    
+                "Question": "What is the name of the first Robin?",
+                "RightAnswer": "Dick Greyson",
+                "WrongAnswers": 
+                    [{"WrongAnswer1": "Tim Robin",
+                    "WrongAnswer2": "Tim Drake",
+                    "WrongAnswer3": "Dick Blackson"}],
+                "Answered": false
+                },
+                {
+                "QuestionNumber": 2,        
+                "Question": "What is the The Court of Owls?",
+                "RightAnswer": "A secret order.",
+                "WrongAnswers": 
+                [{"WrongAnswer1": "A criminal organization vinculated with drug dealment.",
+                "WrongAnswer2": "A police body.",
+                "WrongAnswer3": "None of the answers."}],
+                "Answered": false
+            },
+            {    
+                "QuestionNumber": 3,   
+                "Question": "Who was the RedHood?",
+                "RightAnswer": "All are right.",
+                "WrongAnswers": 
+                [{"WrongAnswer1": "Jason Todd.",
+                "WrongAnswer2": "The Joker at his beggining",
+                "WrongAnswer3": "There was a lot of Red Hoods."}],
+                "Answered": false
+            }
+              
+    ]
+}
