@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/GothamQuiz/static/css/main.85e6a5d1.chunk.css",
+    "main.js": "/GothamQuiz/static/js/main.ab1227ac.chunk.js",
+    "main.js.map": "/GothamQuiz/static/js/main.ab1227ac.chunk.js.map",
+    "runtime-main.js": "/GothamQuiz/static/js/runtime-main.d35b2951.js",
+    "runtime-main.js.map": "/GothamQuiz/static/js/runtime-main.d35b2951.js.map",
+    "static/js/2.647fc361.chunk.js": "/GothamQuiz/static/js/2.647fc361.chunk.js",
+    "static/js/2.647fc361.chunk.js.map": "/GothamQuiz/static/js/2.647fc361.chunk.js.map",
+    "static/js/3.dce8fcd9.chunk.js": "/GothamQuiz/static/js/3.dce8fcd9.chunk.js",
+    "static/js/3.dce8fcd9.chunk.js.map": "/GothamQuiz/static/js/3.dce8fcd9.chunk.js.map",
+    "index.html": "/GothamQuiz/index.html",
+    "static/css/main.85e6a5d1.chunk.css.map": "/GothamQuiz/static/css/main.85e6a5d1.chunk.css.map",
+    "static/js/2.647fc361.chunk.js.LICENSE.txt": "/GothamQuiz/static/js/2.647fc361.chunk.js.LICENSE.txt",
+    "static/media/styles.scss": "/GothamQuiz/static/media/bg.5cacb288.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d35b2951.js",
+    "static/js/2.647fc361.chunk.js",
+    "static/css/main.85e6a5d1.chunk.css",
+    "static/js/main.ab1227ac.chunk.js"
+  ]
+}
