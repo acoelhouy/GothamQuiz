@@ -132,10 +132,9 @@ handleFormChild = () =>{
 
                 <div id="ContentLayout">
                     <h2 id="title">HOW MUCH DO YOU KNOW ABOUT BATMAN UNIVERSE?</h2>
-                    <h4>TAKE THE QUIZ!</h4>
-
-                    <p>It has {TotalQuestions} questions!</p>
-
+                   <div className="ContentPrevious">
+                        <h4>TAKE THE QUIZ!</h4>
+                    </div>
                     <QuizQuestions ActualPosition={Position} Question={Question} WrongAnswers={WrongAnswers} RightAnswer={RightAnswer} onTrigger={this.state.onTrigger}></QuizQuestions>
 
                     <button id="NextCuestion" onClick={this.NextQuestion}> Next Question</button>

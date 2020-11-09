@@ -28,35 +28,111 @@ class QuizQuestions extends Component{
 
         let Append = document.getElementById("Answers");
 
+        //Empty the div if the user already clicks on Next Question
+
         if(this.props.ActualPosition > 1){
 
            document.getElementById("Answers").innerHTML = "";
 
+           //Custom radio. First create all elements except label which is the container 
+            let newInputRight = document.createElement("input");
+            newInputRight.setAttribute("type", "radio");
+            newInputRight.setAttribute("name", "Answer");
+            newInputRight.setAttribute("value", this.state.RandomNumberForRight);
+
+            let newCheckMark = document.createElement("span");
+            newCheckMark.setAttribute("class", "checkmark");
+            let newLabelRight = document.createElement("label");
+            
+           
+            let LabelInfo = document.createElement("P");
+            LabelInfo.innerText = this.props.RightAnswer;
+            //Append all as child for the label 
+            newLabelRight.appendChild(newInputRight);
+            newLabelRight.appendChild(newCheckMark);
+            newLabelRight.appendChild(LabelInfo);
+
+            //Append all to the DOM
+            newLabelRight.setAttribute("htmlFor", newInputRight.getAttribute("name"));
+            newLabelRight.setAttribute("class", "radio-container");
+            document.getElementById("Answers").append(newLabelRight);
+
+            //Bring the others one (which are all wrongs answers)
+
+            //TO DO: reorder the inputs on every rerender 
+
             Object.values(ActualProps).forEach(function(element, index){ 
-                let NameInput = 'Answer';
                 let newInput = document.createElement("input");
                 newInput.setAttribute("type", "radio");
-                newInput.setAttribute("name", NameInput);
+                newInput.setAttribute("name", "Answer");
                 newInput.setAttribute("value", Math.random());
+
+
+                let newCheckMark = document.createElement("span");
+                newCheckMark.setAttribute("class", "checkmark");
+
                 let newLabel = document.createElement("label");
-                newLabel.setAttribute("htmlFor", NameInput);
-                newLabel.innerHTML = element;
-               Append.append(newInput, newLabel);
+                let LabelInfo = document.createElement("P");
+                LabelInfo.innerText = element;
+                //Append all as child for the label 
+                newLabel.appendChild(newInput);
+                newLabel.appendChild(newCheckMark);
+                newLabel.appendChild(LabelInfo);
+
+                newLabel.setAttribute("htmlFor", newInput.getAttribute("name"));
+                newLabel.setAttribute("class", "radio-container");
+
+               Append.append(newLabel);
             })
         }else{
         
+            //Custom radio. First create all elements except label which is the container 
+            let newInputRight = document.createElement("input");
+            newInputRight.setAttribute("type", "radio");
+            newInputRight.setAttribute("name", "Answer");
+            newInputRight.setAttribute("value", this.state.RandomNumberForRight);
+
+            let newCheckMark = document.createElement("span");
+            newCheckMark.setAttribute("class", "checkmark");
+            let newLabelRight = document.createElement("label");
+
+            let LabelInfo = document.createElement("P");
+            LabelInfo.innerText = this.props.RightAnswer;
+            //Append all as child for the label 
+            newLabelRight.appendChild(newInputRight);
+            newLabelRight.appendChild(newCheckMark);
+            newLabelRight.appendChild(LabelInfo);
+
+            //Append all to the DOM
+            newLabelRight.setAttribute("htmlFor", newInputRight.getAttribute("name"));
+            newLabelRight.setAttribute("class", "radio-container");
+            document.getElementById("Answers").append(newLabelRight);
         
-        Object.values(ActualProps).forEach(function(element, index){ 
-            let NameInput = 'Answer';
-            let newInput = document.createElement("input");
-            newInput.setAttribute("type", "radio");
-            newInput.setAttribute("name", NameInput);
-            newInput.setAttribute("value", Math.random());
-            let newLabel = document.createElement("label");
-            newLabel.setAttribute("htmlFor", NameInput);
-            newLabel.innerHTML = element;
-           Append.append(newInput, newLabel);
-         })
+    
+            Object.values(ActualProps).forEach(function(element, index){ 
+                let newInput = document.createElement("input");
+                newInput.setAttribute("type", "radio");
+                newInput.setAttribute("name", "Answer");
+                newInput.setAttribute("value", Math.random());
+
+
+                let newCheckMark = document.createElement("span");
+                newCheckMark.setAttribute("class", "checkmark");
+
+                let newLabel = document.createElement("label");
+
+                let LabelInfo = document.createElement("P");
+                LabelInfo.innerText = element;
+                //Append all as child for the label 
+                newLabel.appendChild(newInput);
+                newLabel.appendChild(newCheckMark);
+                newLabel.appendChild(LabelInfo);
+
+                newLabel.setAttribute("htmlFor", newInput.getAttribute("name"));
+                newLabel.setAttribute("class", "radio-container");
+                
+               Append.append(newLabel);
+            })
         }    
     }
 
@@ -106,8 +182,7 @@ componentWillUpdate(){
             <p>{this.props.Question}</p>
 
             <form id="Answers">
-                <input  name="Answer" type="radio" value={this.state.RandomNumberForRight}></input>
-                <label htmlFor="Answer">{this.state.RightAnswer}</label>
+
             </form>     
            
          </div>
