@@ -92,6 +92,7 @@ body {
   width: 40%;
   margin: 0 auto;
   margin-bottom: 10px;
+  opacity: 0;
 
   @media(max-width: 1024px){
     width: 86%;
@@ -174,4 +175,13 @@ body {
 
       width: 95%;
     }
+}
+
+.radio-container-showed{
+
+  opacity: 1;
+  transition: opacity 0.4s ease-out;
+  -ms-transition: opacity 0.4s ease-out;
+  -moz-transition: opacity 0.4s ease-out;
+  -webkit-transition: opacity 0.4s ease-out;
 }

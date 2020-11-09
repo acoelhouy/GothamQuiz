@@ -55,6 +55,9 @@ class QuizQuestions extends Component{
             //Append all to the DOM
             newLabelRight.setAttribute("htmlFor", newInputRight.getAttribute("name"));
             newLabelRight.setAttribute("class", "radio-container");
+            setTimeout(() => {
+                newLabelRight.classList.add("radio-container-showed"); 
+            }, 1000);
             document.getElementById("Answers").append(newLabelRight);
 
             //Bring the others one (which are all wrongs answers)
@@ -67,6 +70,7 @@ class QuizQuestions extends Component{
                 newInput.setAttribute("name", "Answer");
                 newInput.setAttribute("value", Math.random());
 
+                let IndexPlusTimeOut = index*50;
 
                 let newCheckMark = document.createElement("span");
                 newCheckMark.setAttribute("class", "checkmark");
@@ -81,6 +85,9 @@ class QuizQuestions extends Component{
 
                 newLabel.setAttribute("htmlFor", newInput.getAttribute("name"));
                 newLabel.setAttribute("class", "radio-container");
+                setTimeout(() => {
+                    newLabel.classList.add("radio-container-showed"); 
+                }, 1000+IndexPlusTimeOut);
 
                Append.append(newLabel);
             })
@@ -106,6 +113,9 @@ class QuizQuestions extends Component{
             //Append all to the DOM
             newLabelRight.setAttribute("htmlFor", newInputRight.getAttribute("name"));
             newLabelRight.setAttribute("class", "radio-container");
+            setTimeout(() => {
+                newLabelRight.classList.add("radio-container-showed"); 
+            }, 1000);
             document.getElementById("Answers").append(newLabelRight);
         
     
@@ -115,6 +125,7 @@ class QuizQuestions extends Component{
                 newInput.setAttribute("name", "Answer");
                 newInput.setAttribute("value", Math.random());
 
+                let IndexPlusTimeOut = index*50;
 
                 let newCheckMark = document.createElement("span");
                 newCheckMark.setAttribute("class", "checkmark");
@@ -130,7 +141,10 @@ class QuizQuestions extends Component{
 
                 newLabel.setAttribute("htmlFor", newInput.getAttribute("name"));
                 newLabel.setAttribute("class", "radio-container");
-                
+                setTimeout(() => {
+                    newLabel.classList.add("radio-container-showed"); 
+                }, 1000+IndexPlusTimeOut);
+              
                Append.append(newLabel);
             })
         }    
