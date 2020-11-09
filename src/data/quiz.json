@@ -1,0 +1,57 @@
+{
+
+    "QuizzBody":[
+
+                {
+                "QuestionNumber": 1,    
+                "Question": "What is the name of the first Robin?",
+                "RightAnswer": "Dick Grayson",
+                "WrongAnswers": 
+                    [{"WrongAnswer1": "Tim Robin",
+                    "WrongAnswer2": "Tim Drake",
+                    "WrongAnswer3": "Dick Whiteson"}],
+                "Answered": false
+                },
+                {
+                "QuestionNumber": 2,        
+                "Question": "What is the The Court of Owls?",
+                "RightAnswer": "A secret order.",
+                "WrongAnswers": 
+                [{"WrongAnswer1": "Drug dealers",
+                "WrongAnswer2": "A paramilitary force",
+                "WrongAnswer3": "None of the answers are right."}],
+                "Answered": false
+            },
+            {    
+                "QuestionNumber": 3,   
+                "Question": "Who was the Red Hood?",
+                "RightAnswer": "All are right.",
+                "WrongAnswers": 
+                [{"WrongAnswer1": "Jason Todd.",
+                "WrongAnswer2": "The Joker at his beggining",
+                "WrongAnswer3": "There was a lot of Red Hoods."}],
+                "Answered": false
+            },
+            {    
+                "QuestionNumber": 4,   
+                "Question": "Of which religion belongs the Harley Quinn family?",
+                "RightAnswer": "Judaism",
+                "WrongAnswers": 
+                [{"WrongAnswer1": "Islamic",
+                "WrongAnswer2": "Catolicism",
+                "WrongAnswer3": "Budhism"}],
+                "Answered": false
+            },
+            {    
+                "QuestionNumber": 5,   
+                "Question": "Who is the Oracle?",
+                "RightAnswer": "Barbara Gordon",
+                "WrongAnswers": 
+                [{"WrongAnswer1": "Selina Kayle",
+                "WrongAnswer2": "Betty Kane",
+                "WrongAnswer3": "Kate Kane"}],
+                "Answered": false
+            }
+              
+    ]
+}
